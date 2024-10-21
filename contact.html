@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venusflytrap Restaurant</title>
+    <link rel="stylesheet" href="contact.css"> <!-- Link to external CSS file -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><h1>Venus Delights</h1></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="fullmenu.html">Menu</a></li>
+                <li><a href="reservations.html">Reservations</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info@gourmetdelights.com">info@gourmetdelights.com</a></p>
+        <p>Address: 123 Culinary Blvd, Food City, FC 12345</p><br><p>Let us know your thoughts! Provide as much information as you can so that we may assist you the best we can.</p>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="tel">Phone Number:</label>
+            <input type="tel" id="telephone" name="telephone" required>
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="details">Details</label>
+            <input type="text" id="details" name="details" minlength="1" maxlength="500" required>
+            
+            <button id="sendButton" type="button" disabled>Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2024 <a href="easteregg.html" id="hint">Venus Entanglement.</span> All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

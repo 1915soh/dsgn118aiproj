@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haunted Shadows</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #d1d1d1;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            padding: 50px;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 {
+            font-size: 48px;
+            text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+        }
+        p {
+            font-size: 24px;
+            margin: 20px 0;
+            animation: flicker 2s infinite alternate;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 5px solid rgba(255, 0, 0, 0.8);
+            filter: blur(1px);
+        }
+        .button {
+            background-color: #900000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            background-color: #c00000;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            50% { opacity: 0.6; }
+            100% { opacity: 1; }
+        }
+        @keyframes move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>To do:</h1>
+    <p>Pleez mother</p><br>
+    <p>Stude englesh</p><br>
+    <p>Practis aksent</p><br>
+    <p>Receeve pakage and grind</p><br>
+    <p>Sileens fatt obtoose mann</p>
+    <button class="button" onclick="alert('Doo it agin');">Dun?</button>
+
+    <script>
+        document.body.addEventListener('mousemove', function(e) {
+            const x = e.clientX;
+            const y = e.clientY;
+            if (Math.random() < 0.05) {
+                const ghost = document.createElement('div');
+                ghost.style.position = 'absolute';
+                ghost.style.left = x + 'px';
+                ghost.style.top = y + 'px';
+                ghost.style.width = '50px';
+                ghost.style.height = '50px';
+                ghost.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                ghost.style.borderRadius = '50%';
+                ghost.style.transition = 'opacity 0.5s, transform 0.5s';
+                ghost.style.opacity = 1;
+                ghost.style.filter = 'blur(2px)';
+                document.body.appendChild(ghost);
+                setTimeout(() => {
+                    ghost.style.opacity = 0;
+                    ghost.style.transform = 'translate(-50px, -50px)';
+                    setTimeout(() => {
+                        ghost.remove();
+                    }, 500);
+                }, 100);
+            }
+        });
+    </script>
+</body>
+</html>
